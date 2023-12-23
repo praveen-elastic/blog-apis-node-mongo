@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header-container">
+    <h1 class="title">API Explorer</h1>
+  </header>
+  <main class="main-container">
+    <nav class="sidebar">
+      <ul id="endpoints">
+        <li>
+          <a href="#" data-method="GET" data-url="/blog" data-description="Fetch all blog posts">Get All Blogs</a>
+        </li>
+        <li>
+          <a href="#" data-method="POST" data-url="/blog/add" data-description="Create a new blog post">Create New Blog</a>
+        </li>
+        <li>
+            <a href="#" data-method="GET" data-url="/blog/blog-id" data-description="Fetch a blog post">Get a Blog by ID</a>
+        </li>
+        <li>
+            <a href="#" data-method="DELETE" data-url="/blog/blog-id" data-description="Delete a blog post">Delete a Blog</a>
+        </li>
+        <li>
+          <a href="#" data-method="PUT" data-url="/blog/blog-id" data-description="Update a blog post">Update a Blog</a>
+      </li>
+        <li>
+          <a href="#" data-method="GET" data-url="/user" data-description="Get all Users">Get all Users</a>
+        </li>
+        <li>
+          <a href="#" data-method="POST" data-url="/user/signup" data-description="Register a new user">Create New User</a>
+        </li>
+        <li>
+          <a href="#" data-method="POST" data-url="/user/login" data-description="Login as an existing user">Login with existing User</a>
+        </li>
+        <li>
+          <a href="#" data-method="GET" data-url="/blog/user/user-id" data-description="Get all blogs of a User">Get all Blogs of User by ID</a>
+        </li>
+        </ul>
+    </nav>
+    <section class="content-area">
+        <h2 class="section-title">Request Details</h2>
+        <textarea id="request-description" rows="1"></textarea>
+        <form id="request-form">
+          <div class="request-type">
+            <label for="request-type">Request Type:</label>
+            <select id="request-type" name="request-type">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PUT">PUT</option>
+              <option value="DELETE">DELETE</option>
+            </select>
+          </div>
+          <div class="request-url">
+            <label for="request-url">URL:</label>
+            <input type="text" id="request-url" name="request-url" placeholder="Enter the API endpoint URL">
+          </div>
+          <div class="request-buttons">
+            <button type="button" id="run-query">Run Query</button>
+          </div>
+          <p class="description">
+            <textarea id="endpoint-description" placeholder="Enter request body in JSON format. (optional)"></textarea>
+          </p>
+        </form>
+        
+        <section id="response-viewer">
+          <h2 class="section-title">Response</h2>
+          <pre id="response"></pre>
+        </section>
+      </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
