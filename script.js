@@ -1,5 +1,5 @@
 
-SERVER_URL = "https://blog-api-explorer.onrender.com"
+SERVER_URL = "https://blog-api-explorer.onrender.com/api"
 
 const tabs = document.querySelectorAll('.tabs li');
 const tabContents = document.querySelectorAll('.tab-content');
